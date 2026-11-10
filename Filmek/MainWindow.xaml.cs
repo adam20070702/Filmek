@@ -132,5 +132,12 @@ namespace Filmek
 
             MessageBox.Show("Filmek száma:" + lista.Count + "db");
         }
+        private void tabla_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (tabla.SelectedItem is Film kijeloltFilm)
+            {
+                progressbar.Value = kijeloltFilm.Értékelés;
+            }
+        }
     }
 }

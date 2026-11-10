@@ -19,10 +19,10 @@
             <Button x:Name="scifi" Content="Csak sci-fi" Height="35" Margin="10" Click="scifi_Click"/>
             <Button x:Name="cimek" Content="Csak címek" Height="35" Margin="10" Click="csakcim_Click"/>
             <Button x:Name="rendez" Content="Rendezés cím szerint" Height="35" Margin="10" Click="rendez_Click"/>
+            <ProgressBar x:Name="progressbar" Value="0" Minimum="0" Maximum="10" Height="25" Margin="10"/>
         </StackPanel>
         <StackPanel Grid.Column="1">
-            <DataGrid x:Name="tabla">
-                
+            <DataGrid x:Name="tabla" SelectionChanged="tabla_SelectionChanged">
             </DataGrid>
         </StackPanel>
     </Grid>
