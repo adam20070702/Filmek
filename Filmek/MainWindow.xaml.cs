@@ -47,5 +47,24 @@ namespace Filmek
             lista.Add(new Film("Shrek", "animáció", 90, 7.9));
             tabla.ItemsSource = lista;
         }
+
+        private void hossz_Click(object sender, RoutedEventArgs e)
+        {
+            if (lista.Count == 0)
+            {
+                MessageBox.Show("Nincsenek betöltve a filmek");
+                return;
+            }
+            Film leghosszabb = lista[0];
+            foreach (Film f in lista)
+            {
+                if (f.Hossz > leghosszabb.Hossz)
+                {
+                    leghosszabb = f;
+                }
+            }
+            MessageBox.Show("A leghosszabb film: " + leghosszabb.Cím + " (" + leghosszabb.Hossz + " perc)");
+
+        }
     }
 }
