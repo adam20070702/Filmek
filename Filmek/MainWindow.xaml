@@ -14,7 +14,7 @@
         <StackPanel Grid.Column="0">
             <Button x:Name="betolt" Content="Filmek betöltése" Height="35" Margin="10" Click="betolt_Click"/>
             <Button x:Name="hossz" Content="Leghosszabb film?" Height="35" Margin="10" Click="hossz_Click"/>
-            <Button x:Name="atlag" Content="Átlag értékelés" Height="35" Margin="10"/>
+            <Button x:Name="atlag" Content="Átlag értékelés" Height="35" Margin="10" Click="atlag_Click"/>
             <Button x:Name="scifi" Content="Csak sci-fi" Height="35" Margin="10"/>
             <Button x:Name="rendez" Content="Rendezés cím szerint" Height="35" Margin="10"/>
         </StackPanel>
