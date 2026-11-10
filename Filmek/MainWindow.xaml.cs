@@ -81,5 +81,35 @@ namespace Filmek
             double atlag = osszeg / lista.Count;
             MessageBox.Show("Átlag értékelés: " + Math.Round(atlag,2));
         }
+
+        private void scifi_Click(object sender, RoutedEventArgs e)
+        {
+            List<Film> uj = new List <Film>();
+            foreach (Film f in lista)
+            {
+                if (f.Műfaj == "sci-fi")
+                {
+                    uj.Add(f);
+                }
+            }
+            tabla.ItemsSource = uj;
+        }
+
+        //private void csakfilm_Click(object sender, RoutedEventArgs e)
+        //{
+
+        //}
+
+        private void csakcim_Click(object sender, RoutedEventArgs e)
+        {
+            if (lista.Count == 0)
+            {
+                MessageBox.Show("Nincsenek betöltve a filmek.");
+                return;
+            }
+
+            tabla.ItemsSource = null;
+            tabla.ItemsSource = lista.Select(f => new { Cím = f.Cím }).ToList();
+        }
     }
 }
