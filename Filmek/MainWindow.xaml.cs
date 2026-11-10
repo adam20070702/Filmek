@@ -119,7 +119,6 @@ namespace Filmek
                 MessageBox.Show("Nincsenek betöltve a filmek.");
                 return;
             }
-            tabla.ItemsSource = null;
             tabla.ItemsSource = lista.OrderBy(f => f.Cím).ToList();
         }
 
