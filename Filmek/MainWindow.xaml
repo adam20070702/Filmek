@@ -8,10 +8,11 @@
         Title="Filmek" Height="450" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="1"></ColumnDefinition>
-            <ColumnDefinition Width="2"></ColumnDefinition>
+            <ColumnDefinition Width="260"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <StackPanel Grid.Column="0">
+            <Button Content="Filmek betöltése" x:Name="betolt" Height="35" Margin="10" Click="betolt_Click" ></Button>
         </StackPanel>
         <StackPanel Grid.Column="1">
         </StackPanel>
