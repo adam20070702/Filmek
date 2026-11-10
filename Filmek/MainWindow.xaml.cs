@@ -111,5 +111,27 @@ namespace Filmek
             tabla.ItemsSource = null;
             tabla.ItemsSource = lista.Select(f => new { Cím = f.Cím }).ToList();
         }
+
+        private void rendez_Click(object sender, RoutedEventArgs e)
+        {
+            if (lista.Count == 0)
+            {
+                MessageBox.Show("Nincsenek betöltve a filmek.");
+                return;
+            }
+            tabla.ItemsSource = null;
+            tabla.ItemsSource = lista.OrderBy(f => f.Cím).ToList();
+        }
+
+        private void filmdarab_Click(object sender, RoutedEventArgs e)
+        {
+            if (lista.Count == 0)
+            {
+                MessageBox.Show("Nincsenek betöltve a filmek.");
+                return;
+            }
+
+            MessageBox.Show("Filmek száma:" + lista.Count + "db");
+        }
     }
 }
