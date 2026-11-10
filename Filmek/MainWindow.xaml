@@ -5,8 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Filmek"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Filmek" Height="450" Width="800">
     <Grid>
-
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1"></ColumnDefinition>
+            <ColumnDefinition Width="2"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="0">
+        </StackPanel>
+        <StackPanel Grid.Column="1">
+        </StackPanel>
     </Grid>
 </Window>
