@@ -12,9 +12,16 @@
             <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <StackPanel Grid.Column="0">
-            <Button Content="Filmek betöltése" x:Name="betolt" Height="35" Margin="10" Click="betolt_Click" ></Button>
+            <Button x:Name="betolt" Content="Filmek betöltése" Height="35" Margin="10"/>
+            <Button x:Name="hossz" Content="Leghosszabb film?" Height="35" Margin="10"/>
+            <Button x:Name="atlag" Content="Átlag értékelés" Height="35" Margin="10"/>
+            <Button x:Name="scifi" Content="Csak sci-fi" Height="35" Margin="10"/>
+            <Button x:Name="rendez" Content="Rendezés cím szerint" Height="35" Margin="10"/>
         </StackPanel>
         <StackPanel Grid.Column="1">
+            <DataGrid x:Name="tabla">
+                
+            </DataGrid>
         </StackPanel>
     </Grid>
 </Window>
